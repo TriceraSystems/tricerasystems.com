@@ -3,7 +3,8 @@
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build": "tw-patch extract && vite build",
+		"prepare": "tw-patch install",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
@@ -16,9 +17,14 @@
 		"@sveltejs/adapter-static": "^3.0.5",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
+		"autoprefixer": "^10.4.20",
+		"postcss": "^8.4.47",
 		"svelte": "^4.2.7",
 		"svelte-check": "^4.0.0",
+		"tailwindcss": "^3.4.13",
+		"tailwindcss-patch": "^4.0.0",
 		"typescript": "^5.0.0",
+		"unplugin-tailwindcss-mangle": "^3.0.1",
 		"vite": "^5.0.3"
 	},
 	"type": "module"
