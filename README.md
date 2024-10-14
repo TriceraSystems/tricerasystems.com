@@ -1,22 +1,10 @@
-# create-svelte
+# tricerasystems.com 
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4d6bf752-5964-447f-a889-6be5f62b3021/deploy-status)](https://app.netlify.com/sites/cheery-cucurucho-8dbe8a/deploys)
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Once you've cloned the project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
 ```bash
 npm run dev
