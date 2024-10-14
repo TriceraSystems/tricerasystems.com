@@ -1,7 +1,13 @@
-<script>
+<script lang="ts">
+
+	import Header from '$components/Header.svelte';
+	import Footer from '$components/Footer.svelte';
 	import '../app.css';
+	
 </script>
 
-<div class="app">
+<div class="bg-background flex flex-col min-h-screen w-screen max-w-screen">
+	<Header />
 	<slot />
+	<Footer />
 </div>
