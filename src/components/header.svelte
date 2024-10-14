@@ -6,9 +6,9 @@
             <a href="/">
                 <img
                     src="/logo@210.png"
-                    width="2.5rem"
-                    height="2.5rem"
-                    class="size-10"
+                    width="2rem"
+                    height="2rem"
+                    class="size-8"
                     alt="Tricera Systems"
                     srcset=""
                 />

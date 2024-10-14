@@ -4,5 +4,6 @@
 </svelte:head>
 
 
-
-<div class="w-screen h-[calc(125vh)] bg-paper"></div>
+<div>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia odit quasi vel architecto exercitationem id. Dolore saepe molestias distinctio sequi quas doloribus illo blanditiis, magnam fuga aperiam quis velit dicta.
+</div>

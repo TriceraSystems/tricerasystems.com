@@ -8,6 +8,9 @@
 
 <div class="bg-background flex flex-col min-h-screen w-screen max-w-screen">
 	<Header />
-	<slot />
+	<div class="min-h-screen z-10">
+		<slot />
+	</div>
+	<div class="w-screen h-[calc(125vh)] bg-paper"></div>
 	<Footer />
 </div>
