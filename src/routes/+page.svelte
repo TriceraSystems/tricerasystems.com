@@ -5,6 +5,8 @@
 
 <script lang="ts">
 	import Hero from '$components/hero.svelte';
+	import Contact from '$components/contact.svelte';
 </script>
 
 <Hero />
+<Contact />
