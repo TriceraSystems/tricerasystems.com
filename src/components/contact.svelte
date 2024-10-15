@@ -1,6 +1,7 @@
 <form 
     name="test" 
-    method="post"
+    method="POST"
+    data-netlify-recaptcha="true"
     data-netlify-honeypot="company"
     data-netlify="true">
     <p>
