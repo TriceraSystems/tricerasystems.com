@@ -1,5 +1,6 @@
 <form 
     name="test" 
+    method="post"
     data-netlify-honeypot="company"
     data-netlify="true">
     <p>
