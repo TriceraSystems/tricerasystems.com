@@ -167,7 +167,7 @@
                                     ></polyline><polyline points="8 6 2 12 8 18"
                                     ></polyline></svg
                                 >
-                                <span class="pb-[1px]">Developer</span>
+                                <span class="pb-[1px]">Documentation</span>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="24"
