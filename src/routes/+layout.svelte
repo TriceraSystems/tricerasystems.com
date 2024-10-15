@@ -8,7 +8,7 @@
 
 <div class="bg-background flex flex-col min-h-screen w-screen max-w-screen">
 	<Header />
-	<div class="min-h-[150vh] z-10 container pt-12"><slot/></div>
+	<main class="min-h-[150vh] z-10 container pt-12"><slot/></main>
 	<div class="w-screen h-[calc(150vh)] bg-paper"></div>
 	<Footer />
 </div>
