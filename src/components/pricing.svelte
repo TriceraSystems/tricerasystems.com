@@ -22,7 +22,7 @@
                     <div class="flex gap-2">
                         <h2 class="text-xl leading-6 font-bold text-white">{plan.name}</h2>
                         {#if plan.freeTrial}
-                            <span class="text-lg font-thin text-white/[.7]">Includes 7-Day free trial</span>
+                            <span class="text-lg font-thin text-white/[.7]">Includes 7-Day Free Trial</span>
                         {:else}
                             <span class="text-lg font-thin text-white/[.0]">.</span>
                         {/if}
