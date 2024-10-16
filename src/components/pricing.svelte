@@ -33,12 +33,12 @@
                         <span class="text-base font-medium text-white/[.7]">/mo</span>
                     </p>
                     {#if plan.freeTrial}
-                        <a href="/sign-up"
+                        <a href="/"
                             class="mt-8 block w-full border border-white/[.7] rounded-sm py-2 text-sm font-semibold text-white text-center">
                             Start a Free Trial Now
                         </a>
                     {:else}
-                        <a href="/sign-up"
+                        <a href="/"
                             class="mt-8 block w-full border border-white/[.7] rounded-sm py-2 text-sm font-semibold text-white text-center">
                             Start the {plan.name} plan.
                         </a>
