@@ -4,9 +4,13 @@
 </svelte:head>
 
 <script lang="ts">
+	import type { LayoutData } from './$types';
 	import Hero from '$components/hero.svelte';
-	import Contact from '$components/contact.svelte';
+	import Pricing from '$components/pricing.svelte';
+
+	/** @type {import('./$types').LayoutData} */
+	export let data: LayoutData;
 </script>
 
 <Hero />
-<Contact />
+<Pricing data={data.components.pricing} />
