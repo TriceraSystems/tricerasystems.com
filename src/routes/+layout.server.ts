@@ -9,7 +9,7 @@ export async function load() {
                     {
                         'name': 'Basic',
                         'description': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, voluptate?',
-                        'price': '$10',
+                        'price': 10,
                         'freeTrial': true,
                         'features': [
                             {
@@ -35,7 +35,7 @@ export async function load() {
                     {
                         'name': 'Pro',
                         'description': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, voluptate?',
-                        'price': '$20',
+                        'price': 20,
                         'freeTrial': true,
                         'features': [
                             {
@@ -73,7 +73,7 @@ export async function load() {
                     {
                         'name': 'Enterprise',
                         'description': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, voluptate?',
-                        'price': '$30',
+                        'price': 30,
                         'freeTrial': false,
                         'features': [
                             {
