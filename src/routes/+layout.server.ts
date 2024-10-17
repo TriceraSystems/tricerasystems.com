@@ -3,6 +3,7 @@ export async function load() {
 	return {
 		components: {
             pricing: {
+                'description': 'Our platform offers a range of pricing plans to suit your needs. These comprehensive plans provide access to all platform features and services. Alternatively, if you prefer, you can pay individually for specific services.',
                 'discount-disclaimer': '* %5 off when you pay yearly, %20 off when you pay for 2+ years upfront !',
                 'dynamic-pricing-disclaimer': '* We use dynamic pricing based on several factors: supply and demand, data-driven insights, regular market analysis, and usage. We are constantly improving our pricing model to provide the best value for our customers. ',
                 'upgrade-disclaimer': '* You can upgrade or downgrade your plan at any time. The changes will take effect at the end of the current billing cycle.',

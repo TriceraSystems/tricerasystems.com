@@ -186,7 +186,8 @@
                         </li>
 
                         <li>
-                            <button
+                            <a
+                                href="/#pricing"
                                class="group inline-flex h-10 w-max gap-2 place-items-center px-4 py-2 text-sm font-medium"
                             >
                                 <svg
@@ -207,7 +208,7 @@
                                 >
                                 
                                 <span class="pb-[1px]">Pricing</span>
-                            </button>
+                        </a>
                         </li>
                     </ul>
                 </div>

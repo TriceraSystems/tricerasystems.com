@@ -3,7 +3,11 @@
     let period = "monthly";
 </script>
 
-<div class="sm:flex sm:flex-col sm:align-center">
+<div class="sm:flex sm:flex-col sm:align-center" id='pricing'>
+    <div class="flex flex-col place-items-center text-center gap-4 pb-12 mx-auto w-full md:max-w-5xl">
+        <h1 class="text-4xl text-bold">Platform Pricing</h1>
+        <p class="text-white/[.8]">{data.description}</p>
+    </div>
     <div
         class="relative place-items-center self-center border border-white/[.7] rounded-lg p-0.5 flex"
     >
