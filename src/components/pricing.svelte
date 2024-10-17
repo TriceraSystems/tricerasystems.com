@@ -3,8 +3,10 @@
     let period = "monthly";
 </script>
 
-<div class="sm:flex sm:flex-col sm:align-center" id='pricing'>
-    <div class="flex flex-col place-items-center text-center gap-4 pb-12 mx-auto w-full md:max-w-5xl">
+<div class="sm:flex sm:flex-col sm:align-center" id="pricing">
+    <div
+        class="flex flex-col place-items-center text-center gap-4 pb-12 mx-auto w-full md:max-w-5xl"
+    >
         <h1 class="text-4xl text-bold">Platform Pricing</h1>
         <p class="text-white/[.8]">{data.description}</p>
     </div>
@@ -19,7 +21,7 @@
                 : 'font-bold'} ml-0.5 relative w-1/2 border rounded-sm py-2 whitespace-nowrap focus:outline-none sm:w-auto sm:px-8 border-transparent text-white"
             >Monthly Billing
         </button>
-        <div class="h-6 border-r border-white/[.6]"></div>
+        <div class="h-6 border-r border-white/[.6]" />
         <button
             on:click={() => (period = "yearly")}
             type="button"
@@ -30,7 +32,7 @@
         </button>
     </div>
     <div
-        class="mt-6 space-y-6 sm:space-y-0 sm:grid sm:grid-cols-3 sm:gap-6 md:max-w-5xl md:mx-auto xl:grid-cols-3"
+        class="mt-6 space-y-6 sm:space-y-0 sm:grid sm:grid-cols-3 sm:gap-4 md:max-w-5xl md:mx-auto xl:grid-cols-3"
     >
         {#each data.plans as plan}
             <div
@@ -58,33 +60,62 @@
                         <span
                             class="text-4xl font-bold text-white tracking-tighter"
                         >
-                            £ {period === "monthly" ? plan.price : (plan.price * 12 * 0.95).toFixed(0)}
+                            £ {period === "monthly"
+                                ? plan.price
+                                : (plan.price * 12 * 0.8).toFixed(0)}
                         </span>
-                        <span class="text-base font-medium text-white/[.7] ml-2">
+                        <span
+                            class="text-base font-medium text-white/[.7] ml-2"
+                        >
                             / {period === "monthly" ? "mo" : "yr"}
                         </span>
                         {#if period == "yearly"}
-                        <div  class="text-lg font-medium text-white/[.7] tracking-tighter">
-                            <span>or pay</span>
-                            <span>£{(plan.price * 24 * 0.80).toFixed(0)}</span>
-                            <span>if you pay for 2 years.</span>
-                        </div>
+                            <div
+                                class="text-lg font-medium text-white/[.7] tracking-tighter"
+                            >
+                                <span>or pay</span>
+                                <span
+                                    >£{(plan.price * 24 * 0.65).toFixed(
+                                        0,
+                                    )}</span
+                                >
+                                <span>if you pay for 2 years.</span>
+                            </div>
                         {/if}
                     </p>
                     {#if plan.freeTrial}
                         <a
                             href="/"
-                            class="mt-8 block w-full border border-white/[.7] rounded-sm py-2 text-sm font-semibold text-white text-center"
+                            class="mt-8 mb-2 block w-full border border-white/[.7] rounded-sm py-2 text-sm font-semibold text-white text-center"
                         >
                             Start a Free Trial Now
+                        </a>
+                        <a href="/" class="flex gap-2 place-items-center">
+                            <span class="underline">or buy now</span>
+                            <svg
+                                class="size-4 mt-1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                ><line x1="5" y1="12" x2="19" y2="12"
+                                ></line><polyline points="12 5 19 12 12 19"
+                                ></polyline></svg
+                            >
                         </a>
                     {:else}
                         <a
                             href="/"
-                            class="mt-8 block w-full border border-white/[.7] rounded-sm py-2 text-sm font-semibold text-white text-center"
+                            class="mt-8 mb-2 block w-full border border-white/[.7] rounded-sm py-2 text-sm font-semibold text-white text-center"
                         >
                             Start the {plan.name} plan.
                         </a>
+                        <div class="min-h-[24px]" />
                     {/if}
                 </div>
                 <div class="pt-6 pb-8 px-6">
@@ -95,64 +126,73 @@
                     </h3>
                     <ul role="list" class="mt-4 space-y-3">
                         {#each plan.features as feature}
-
                             {#if typeof feature === "string"}
                                 <li class="pt-1 min-h-[24px]">
                                     <span>{feature}</span>
                                 </li>
                             {:else}
-
-                            <li class="flex space-x-3">
-                                {#if !feature.isAddOn}
-                                    {#if feature.isIncluded}
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            class="flex-shrink-0 h-5 w-5 text-green-400/[.7]"
-                                            width="24"
-                                            height="24"
-                                            viewBox="0 0 24 24"
-                                            stroke-width="2"
-                                            stroke="currentColor"
-                                            fill="none"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            aria-hidden="true"
-                                        >
-                                            <path
-                                                stroke="none"
-                                                d="M0 0h24v24H0z"
+                                <li class="flex space-x-3">
+                                    {#if !feature.isAddOn}
+                                        {#if feature.isIncluded}
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                class="flex-shrink-0 h-5 w-5 text-green-400/[.7]"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                stroke-width="2"
+                                                stroke="currentColor"
                                                 fill="none"
-                                            ></path>
-                                            <path d="M5 12l5 5l10 -10"></path>
-                                        </svg>
-                                    {:else}
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            class="flex-shrink-0 h-5 w-5 text-red-400/[.7]"
-                                            width="24"
-                                            height="24"
-                                            viewBox="0 0 24 24"
-                                            stroke-width="2"
-                                            stroke="currentColor"
-                                            fill="none"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            aria-hidden="true"
-                                        >
-                                            <line x1="18" y1="6" x2="6" y2="18"
-                                            ></line>
-                                            <line x1="6" y1="6" x2="18" y2="18"
-                                            ></line>
-                                        </svg>
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    stroke="none"
+                                                    d="M0 0h24v24H0z"
+                                                    fill="none"
+                                                ></path>
+                                                <path d="M5 12l5 5l10 -10"
+                                                ></path>
+                                            </svg>
+                                        {:else}
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                class="flex-shrink-0 h-5 w-5 text-red-400/[.7]"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                stroke-width="2"
+                                                stroke="currentColor"
+                                                fill="none"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                aria-hidden="true"
+                                            >
+                                                <line
+                                                    x1="18"
+                                                    y1="6"
+                                                    x2="6"
+                                                    y2="18"
+                                                ></line>
+                                                <line
+                                                    x1="6"
+                                                    y1="6"
+                                                    x2="18"
+                                                    y2="18"
+                                                ></line>
+                                            </svg>
+                                        {/if}
                                     {/if}
-                                {/if}
-                                <span class="text-base {feature.isHighlighted ? 'text-white' : 'text-white/[.7]'}">
-                                    {feature.name}
-                                </span>
-                            </li>
-
+                                    <span
+                                        class="text-base {feature.isHighlighted
+                                            ? 'text-white'
+                                            : 'text-white/[.7]'}"
+                                    >
+                                        {feature.name}
+                                    </span>
+                                </li>
                             {/if}
-
                         {/each}
                     </ul>
                 </div>
@@ -169,13 +209,10 @@
             {data["dynamic-pricing-disclaimer"]}
         </p>
         <p>
-            {data["upgrade-disclaimer"]}
-        </p>
-        <p>
-            {data["trail-disclaimer"]}
-        </p>
-        <p>
-            Read our full <a href="/" class="text-white underline">Terms of Service</a> and <a href="/" class="text-white underline">Privacy Policy</a>.
+            Read our full <a href="/" class="text-white underline"
+                >Terms of Service</a
+            >
+            and <a href="/" class="text-white underline">Privacy Policy</a>.
         </p>
     </div>
 </div>
